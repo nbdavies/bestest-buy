@@ -5,7 +5,10 @@ class ProductsController < ApplicationController
   end
   
   def show
-    # Request a product's info from the Best Buy API
-    # Render it in a page
+    @upc = Upc.new(params[:id])
+    raise 'Invalid UPC' unless @upc.valid?
+    @product = BestBuyApiProductByUpc.new(@upc).result
+  rescue => e
+    redirect_back(fallback_location: :root)
   end
 end

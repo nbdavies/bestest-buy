@@ -14,7 +14,7 @@ class Search extends React.Component {
 
   render() {
     return(
-      <div>
+      <div className='gx-4 gy-4'>
         <h2>Bestest Buy</h2>
         <SearchBar onSearch={this.handleSearch} />
         <SearchResults results={this.state.results} />

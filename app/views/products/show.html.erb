@@ -1,0 +1,13 @@
+<div class='row'>
+  <h2>Bestest Buy</h2>
+</div>
+<div class='row'>
+  <h4><%= @product['name'] %></h4>
+  <div class='col-md-6 col-lg-4'>
+    <img src="<%= @product['image'] %>" class='img-thumbnail' style="max-height: 10em; width: 'auto'; object-fit: 'contain';"/>
+  </div>
+  <p><%= @product['longDescription'] %></p>
+  <p>Price: <%= @product['salePrice'] %></p>
+  <p>UPC: <%= @upc.to_s %></p>
+  <p>Check digit: <%= @upc.check_digit %></p>
+</div>
