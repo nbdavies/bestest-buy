@@ -25,6 +25,8 @@ class Search extends React.Component {
   handleSearch(term){
     let search_string = new URLSearchParams({ search_term: term }).toString()
     fetch('http://localhost:3000/products?' + search_string, {
+      method: 'GET',
+      mode: 'no-cors',
       headers: {
         'Content-Type': 'text/plain'
       }
