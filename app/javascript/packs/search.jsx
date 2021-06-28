@@ -26,7 +26,7 @@ class Search extends React.Component {
     let search_string = new URLSearchParams({ search_term: term }).toString()
     fetch('http://localhost:3000/products?' + search_string, {
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'text/plain'
       }
     })
       .then(response => response.json())
